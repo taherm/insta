@@ -1,0 +1,35 @@
+Schema::create('menus', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('parent_id');
+            $table->string('title');
+            $table->timestamps();
+        });
+
+
+
+
+
+<ul class="nav navbar-nav c-theme-nav"> 
+	@foreach($cat as $item)
+	@if($item->children->count() > 0)
+						<li class="c-active">
+						<a href="javascript:;" class="c-link dropdown-toggle">Home<span class="c-arrow c-toggler"></span></a>
+						</li>
+						<li class="c-menu-type-classic">
+						<a href="javascript:;" class="c-link dropdown-toggle">Features<span class="c-arrow c-toggler"></span></a>
+													<ul class="dropdown-menu c-menu-type-classic c-pull-left">
+										            <li>
+                									<a href="component-smooth-scroll.html">Smooth Scroll Links</a>
+            										</li>
+													</ul>
+						</li>
+	</ul>
+
+
+
+
+	@php
+$category=$imagesFromDB->where('url',$image->getimageThumbnailUrl())->first();
+$t=$category->categories();
+dd($t);
+       @endphp
