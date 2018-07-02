@@ -99,11 +99,12 @@ Follow: http://www.twitter.com/themehats
 <!-- Dropdown menu toggle on mobile: c-toggler class can be applied to the link arrow or link itself depending on toggle mode -->
 <nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-uppercase c-fonts-bold">
 	<ul class="nav navbar-nav c-theme-nav"> 
-	@foreach($cat as $item)
-	@if($item->children->count() > 0)
-						<li class="c-active">
+	<li class="c-active">
 						<a href="/" class="c-link dropdown-toggle">Home<span class="c-arrow c-toggler"></span></a>
 						</li>
+	@foreach($cat as $item)
+	@if($item->children->count() > 0)
+						
 						<li class="c-menu-type-classic">
 						<a href="/" class="c-link dropdown-toggle">{{$item->title}}<span class="c-arrow c-toggler"></span></a>
 													<ul class="dropdown-menu c-menu-type-classic c-pull-left">

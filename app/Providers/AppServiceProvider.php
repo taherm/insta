@@ -49,7 +49,14 @@ class AppServiceProvider extends ServiceProvider
         {
             
             $categories = \App\Category::with('children')->where('parent_id','>',0)->get();
+            $imagesFromDB=\App\Image::all();
             $view->with('cate', $categories);
+        });
+
+        view()->composer('*', function($view)
+        {
+            $imagesFromDB=\App\Image::all();
+            $view->with('imagesFromDB',$imagesFromDB);
         });
         
         view()->composer('admin.create-portfolio', function($view)

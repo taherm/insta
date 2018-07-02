@@ -182,7 +182,7 @@
 	        <div class="cbp-item identity logos">
 	            <a class="cbp-caption cbp-lightbox">
 	                <div class="cbp-caption-defaultWrap">
-	                    <img src="{{asset($image->getimageThumbnailUrl())}}" alt="">
+	                    <img class="img-thumbnail img-responsive" src="{{asset($image->getimageThumbnailUrl())}}" alt="">
 	                </div>
 	                
 	            </a>

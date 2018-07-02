@@ -63,6 +63,7 @@ Route::get('/open/3', function () {
 
 
 Route::get('admin','AdminController@index');
+Route::get('admin/saved-posts','AdminController@posts');
 Route::post('admin/slider','AdminController@add_slider');
 Route::post('admin/album','AdminController@add_album');
 Route::delete('admin/del-slider','AdminController@delete_slider');
@@ -87,7 +88,7 @@ Route::get('admin/create-page', function () {
 Route::post('sub-menu','AdminController@submenu');
 Route::post('main-menu','AdminController@mainmenu');
 Route::post('add-post','AdminController@store');
-Route::delete('admin/{id}','AdminController@destroy');
+Route::delete('admin/delete-post/{id}','AdminController@destroy');
 Route::get('admin/{id}/edit','AdminController@edit');
 Route::get('admin/{id}/edit_menu','AdminController@edit_menu');
 

@@ -65,6 +65,12 @@
                             <span class="nav-label black">All Posts</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="/admin/saved-posts" class=" hvr-bounce-to-right">
+                            <i class="fa fa-clone nav_icon" ></i>
+                            <span class="nav-label black">Saved Posts</span>
+                        </a>
+                    </li>
                     
 
                     

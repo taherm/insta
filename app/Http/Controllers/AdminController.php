@@ -30,12 +30,18 @@ class AdminController extends Controller
         //$instagram = Instagram::withCredentials('courtside.blr', 'aqamoula');
         //$instagram->login(); // will use cached session if you can force login $instagram->login(true)
         //$images = $instagram->getMedias('courtside.blr', 100);
-        //return view('admin.pages',compact('images','imagesFromDB'));
+        //return view('admin.pages',compact('images'));
         $instagram = new Instagram();
         $nonPrivateAccountMedias = $instagram->getMedias('ideasowners',16);
         return view('admin.pages')->with('images',$nonPrivateAccountMedias);
     }
 
+
+    public function posts()
+    {
+        $imagesFromDB=Image::all();
+        return view('admin.posts')->with('images',$imagesFromDB);
+    }
 
     public function portfolio()
     {
@@ -240,11 +246,10 @@ $image->categories()->attach(Category::where('title',request('submenu'))->first(
 
     public function destroy($id)
     {
-        $serv = Service::find($id);
-        File::delete('uploads/'.$serv->image);
-        File::delete('uploads/'.$serv->icon);
-        $serv->delete();
-        session()->flash('message','Page Deleted!');
+        $item = Image::find($id);
+       
+        $item->delete();
+        session()->flash('message','Post Deleted!');
     
         return redirect('/admin');
     }
