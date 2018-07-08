@@ -21,10 +21,26 @@
        <div class="col-md-3">
        <a href="{{url('/save/?url='.$image->getimageThumbnailUrl())}}"><img class="img-thumbnail img-responsive" src="{{asset($image->getimageThumbnailUrl())}}"/> </a>
        
+    //  @php
       
+     // $url = explode("?", $image->getimageThumbnailUrl())[0];
+     // $n=$imagesFromDB->where('url',$url)->first();
+     // if($n)
+      //{
+       // $k= $n->categories()->get();
+       // foreach ($k as $title) {
+    //echo( $title['title']);
+//}
+  //    }
+      
+// else
+ //{
+  //   echo("it is null");
+ //}    
+      //@endphp
        <form method="POST" action="/add-post" enctype="multipart/form-data">
                 {{ csrf_field() }}
-                <input type="hidden" value="{{$image->getimageThumbnailUrl()}}" name="image"/> 
+                <input type="hidden" value="{{explode("?", $image->getimageThumbnailUrl())[0]}}" name="image"/> 
                
                        <b>Add to Menu</b>
           <select name="submenu" class="form-control">

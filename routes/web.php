@@ -26,8 +26,12 @@ use App\Category;
 
 
 Route::get('/', function () {
+    //$instagram = Instagram::withCredentials('courtside.blr', 'aqamoula');
+    //$instagram->login(); // will use cached session if you can force login $instagram->login(true)
+    //$nonPrivateAccountMedias = $instagram->getMedias('courtside.blr', 100);
     $instagram = new Instagram();
     $nonPrivateAccountMedias = $instagram->getMedias('ideasowners',12);
+    //dd($nonPrivateAccountMedias);
     return view('index')->with('images',$nonPrivateAccountMedias);
 
 });
