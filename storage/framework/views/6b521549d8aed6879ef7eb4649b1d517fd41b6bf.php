@@ -1,5 +1,4 @@
-@extends('layouts.master')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!-- END: HEADER --><!-- END: LAYOUT/HEADERS/HEADER-1 -->
 	<!-- BEGIN: CONTENT/USER/FORGET-PASSWORD-FORM -->
 
@@ -12,7 +11,7 @@
 <div class="c-layout-breadcrumbs-1 c-subtitle c-fonts-uppercase c-fonts-bold">
 	<div class="container">
 		<div class="c-page-title c-pull-left">
-			<h3 class="c-font-uppercase c-font-sbold">{{$name}}</h3>
+			<h3 class="c-font-uppercase c-font-sbold"><?php echo e($name); ?></h3>
 			<h4 class="">Page Sub Title Goes Here</h4>
 		</div>
 		<ul class="c-page-breadcrumbs c-theme-nav c-pull-right c-fonts-regular">
@@ -30,11 +29,11 @@
 	    
 
 	    <div id="grid-container" class="cbp">
-		@foreach($images as $image)
+		<?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 	        <div class="cbp-item identity logos">
 	            <a class="cbp-caption cbp-lightbox">
 	                <div class="cbp-caption-defaultWrap">
-	               <a href="{{asset($image->link)}}">     <img src="{{asset('/uploads/'.$image->url)}}" alt=""> </a>
+	               <a href="<?php echo e(asset($image->link)); ?>">     <img src="<?php echo e(asset('/uploads/'.$image->url)); ?>" alt=""> </a>
 
 
 
@@ -44,7 +43,7 @@
 	                
 	            </a>
 	        </div>
-			@endforeach
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 	        
 	    </div>
 
@@ -53,4 +52,5 @@
 		<!-- END: PAGE CONTENT -->
 	</div>
 	<!-- END: PAGE CONTAINER -->
-	@endsection
+	<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

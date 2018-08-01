@@ -1,0 +1,23 @@
+public function store()
+    {
+      
+        
+        $saved_image = new \App\Image;
+        $image_old= request('image');
+        $image=basename(parse_url($image_old)['path']);
+      //  dd($image);
+       // $imageName = md5(uniqid(rand() * (time()))) . '.' . $image->getClientOriginalExtension();
+        $savePath = public_path(self::UPLOAD_PATH . $image);
+        Image::make($image_old)->save($savePath, 100);
+        $fullImagePath =$image;
+        //$serv->image = $fullImagePath;
+        dd($fullImagePath);
+
+        $image->save();
+
+$image->categories()->attach(Category::where('title',request('submenu'))->first()->id);
+
+        session()->flash('message','Post Added!');
+       
+        return redirect('/admin');
+    }

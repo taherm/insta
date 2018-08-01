@@ -1,16 +1,17 @@
-@extends('layouts.admin') @section('content')
+ <?php $__env->startSection('content'); ?>
 <div class="col-md-12 main">
     <div class="content-top-1">
         <div>
             <div class="col-md-2 col-xs-6 pull-right">
 
-                <b> {{$username}}</b>
+                <b> <?php echo e($username); ?></b>
                 <a class="nav-link text-success btn btn-outline-success" href="/logout-user" onclick="event.preventDefault();                                                 document.getElementById('logout').submit();">
                     Logout
                 </a>
 
                 <form id="logout" action="/logout-user" method="POST" style="display: one;">
-                    {{ csrf_field() }}
+                    <?php echo e(csrf_field()); ?>
+
                 </form>
             </div>
             <div class="col-md-10 col-xs-6">
@@ -24,23 +25,24 @@
 
 
             <div class="row">
-                @foreach($imagesArray as $image)
+                <?php $__currentLoopData = $imagesArray; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col-md-3">
 
-                    <img class="img-thumbnail img-responsive" src="{{asset($image[0])}}" />
+                    <img class="img-thumbnail img-responsive" src="<?php echo e(asset($image[0])); ?>" />
 
 
 
 
                     <form method="POST" action="/add-post" enctype="multipart/form-data">
-                        {{ csrf_field() }}
-                        <input type="hidden" value="{{$image[0]}}" name="image" />
-                        <input type="hidden" value="{{$image[1]}}" name="link" />
+                        <?php echo e(csrf_field()); ?>
+
+                        <input type="hidden" value="<?php echo e($image[0]); ?>" name="image" />
+                        <input type="hidden" value="<?php echo e($image[1]); ?>" name="link" />
                         <b>Add to Menu</b>
                         <select name="submenu" class="form-control">
-                            @foreach($cate as $item)
-                            <option value="{{$item->title}}">{{ $item->title }}</option>
-                            @endforeach
+                            <?php $__currentLoopData = $cate; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($item->title); ?>"><?php echo e($item->title); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                         <div>
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -52,7 +54,7 @@
 
 
 
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 <br>
             </div>
 
@@ -96,4 +98,5 @@
 
 <div class="clearfix"> </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

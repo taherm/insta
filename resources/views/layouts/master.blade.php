@@ -18,7 +18,7 @@ Follow: http://www.twitter.com/themehats
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 	<meta charset="utf-8"/>
-	<title>JANGO | Ultimate Multipurpose Bootstrap HTML Theme - Default Home</title>
+	<title>Family Fun</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -29,6 +29,7 @@ Follow: http://www.twitter.com/themehats
 	<link href="{{asset('/assets/plugins/socicon/socicon.css')}}" rel="stylesheet" type="text/css"/>
 	<link href="{{asset('/assets/plugins/bootstrap-social/bootstrap-social.css')}}" rel="stylesheet" type="text/css"/>		
 	<link href="{{asset('/assets/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link href="{{asset('/assets/plugins/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css"/>
 	<link href="{{asset('/assets/plugins/animate/animate.min.css')}}" rel="stylesheet" type="text/css"/>
 	<link href="{{asset('/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
@@ -46,6 +47,7 @@ Follow: http://www.twitter.com/themehats
 	
 			<!-- BEGIN: PAGE STYLES -->
 			<link href="{{asset('/assets/plugins/ilightbox/css/ilightbox.css')}}" rel="stylesheet" type="text/css"/>
+			<link rel="stylesheet" href="{{asset('/assets/plugins/colorbox.css')}}" />
 				<!-- END: PAGE STYLES -->
 	
     <!-- BEGIN THEME STYLES -->
@@ -67,24 +69,16 @@ Follow: http://www.twitter.com/themehats
 			<div class="c-navbar-wrapper clearfix">
 				<div class="c-brand c-pull-left">
 					<a href="index.html" class="c-logo">
-						<img src="{{asset('/assets/base/img/layout/logos/logo-3.png')}}" alt="JANGO" class="c-desktop-logo">
-						<img src="{{asset('/assets/base/img/layout/logos/logo-3.png')}}" alt="JANGO" class="c-desktop-logo-inverse">
-						<img src="{{asset('/assets/base/img/layout/logos/logo-3.png')}}" alt="JANGO" class="c-mobile-logo">
+						<img src="{{asset('/images/family fun.jpg')}}" alt="JANGO" class="c-desktop-logo">
+						<img src="{{asset('/images/family fun.jpg')}}" alt="JANGO" class="c-desktop-logo-inverse">
+						<img src="{{asset('/images/family fun.jpg')}}" alt="JANGO" class="c-mobile-logo">
 					</a>
 					<button class="c-hor-nav-toggler" type="button" data-target=".c-mega-menu">
 					<span class="c-line"></span>
 					<span class="c-line"></span>
 					<span class="c-line"></span>
 					</button>
-					<button class="c-topbar-toggler" type="button">
-						<i class="fa fa-ellipsis-v"></i>
-					</button>
-					<button class="c-search-toggler" type="button">
-						<i class="fa fa-search"></i>
-					</button>
-					<button class="c-cart-toggler" type="button">
-						<i class="icon-handbag"></i> <span class="c-cart-number c-theme-bg">2</span>
-					</button>
+					
 				</div>
 				<!-- END: BRAND -->				
 				<!-- BEGIN: QUICK SEARCH -->
@@ -121,6 +115,13 @@ Follow: http://www.twitter.com/themehats
 						</li>
 						@endif
 				@endforeach
+
+				<li class="c-active">
+						<a href="/about" class="c-link dropdown-toggle">About Us<span class="c-arrow c-toggler"></span></a>
+						</li>
+						<li class="c-active">
+						<a href="/contact" class="c-link dropdown-toggle">Contact Us<span class="c-arrow c-toggler"></span></a>
+						</li>
 	</ul>
 </nav>
 <!-- END: MEGA MENU --><!-- END: LAYOUT/HEADERS/MEGA-MENU -->
@@ -190,7 +191,7 @@ Follow: http://www.twitter.com/themehats
 	<script src="{{asset('/assets/base/js/components.js')}}" type="text/javascript"></script>
 	<script src="{{asset('/assets/base/js/components-shop.js')}}" type="text/javascript"></script>
 	<script src="{{asset('/assets/base/js/app.js')}}" type="text/javascript"></script>
-	
+	<script src="{{asset('/assets/base/js/jquery.colorbox.js')}}"></script>
 	<!-- END: THEME SCRIPTS -->
 	<script src="{{asset('assets/demos/default/js/scripts/pages/fullwidth-gallery.js')}}" type="text/javascript"></script>
 					
@@ -206,6 +207,38 @@ Follow: http://www.twitter.com/themehats
 											<script src="{{asset('/assets/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js')}}" type="text/javascript"></script>
 							<!-- END: PAGE SCRIPTS -->
 		<!-- END: LAYOUT/BASE/BOTTOM -->
+
+
+		<script>
+			$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+				$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({inline:true, width:"50%"});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+
+				$('.non-retina').colorbox({rel:'group5', transition:'none'})
+				$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script>
     </body>
 	
 

@@ -1,0 +1,11 @@
+ <ul>
+
+       @foreach($savedImages->where('url',$image) as $cat)
+ 
+    @if($category=$cat->url)
+       <li>
+       {{ $category->categories->title }} 
+       </li>
+       @endif
+       @endforeach
+       </ul>

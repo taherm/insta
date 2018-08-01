@@ -1,0 +1,23 @@
+https://instagram.fkwi1-1.fna.fbcdn.net/vp/f18ae88871965f6ddd3b4feff3a4492f/5B588510/t51.2885-15/e15/c144.0.352.352/37178212_1745384815530869_459000273000464384_n.jpg
+https://instagram.fkwi1-1.fna.fbcdn.net/vp/e4906a9ce74c45331a1a0d1d
+
+
+
+
+
+<ul>
+@php
+$saved=$savedImages->where('url',$image)->first();
+@endphp
+@foreach($saved->categories as $cat)
+@if($cat->title)
+
+<li>
+{{ $cat->title }} 
+</li>
+@else
+{{dd("not working")}}
+@endif
+@endforeach
+
+</ul>

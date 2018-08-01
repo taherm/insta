@@ -2,6 +2,13 @@
 Core script to handle the entire theme and core functions
 **/
 
+
+$( "#dialog" ).dialog({ autoOpen: false });
+$( "#btnExample" ).click(function() {
+  $( "#dialog" ).dialog( "open" );
+});
+
+
 var App = function() {
 
     // IE mode

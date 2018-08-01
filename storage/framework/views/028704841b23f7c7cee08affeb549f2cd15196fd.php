@@ -1,4 +1,4 @@
-@extends('layouts.master') @section('content')
+ <?php $__env->startSection('content'); ?>
 <!-- END: HEADER -->
 <!-- END: LAYOUT/HEADERS/HEADER-1 -->
 
@@ -27,16 +27,16 @@
 
 
 		<div id="grid-container" class="cbp">
-			@foreach($images as $image)
+			<?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="cbp-item identity logos">
 				<a class="cbp-caption cbp-lightbox">
 					<div class="cbp-caption-defaultWrap">
-						<img class="img-thumbnail img-responsive" src="{{asset($image->getimageThumbnailUrl())}}" alt="">
+						<img class="img-thumbnail img-responsive" src="<?php echo e(asset($image->getimageThumbnailUrl())); ?>" alt="">
 					</div>
 
 				</a>
 			</div>
-			@endforeach
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 		</div>
 
@@ -62,4 +62,5 @@
 <!-- END: PAGE CONTAINER -->
 
 <!-- BEGIN: LAYOUT/FOOTERS/FOOTER-6 -->
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

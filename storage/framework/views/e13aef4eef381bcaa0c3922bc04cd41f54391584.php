@@ -37,13 +37,14 @@
             </div>
 
 
-            <a href="{{ route('logout') }}" class="btn pull-right" onclick="event.preventDefault();
+            <a href="<?php echo e(route('logout')); ?>" class="btn pull-right" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                 Logout
             </a>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
+            <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                <?php echo e(csrf_field()); ?>
+
             </form>
             <div class=" border-bottom">
 
@@ -96,16 +97,17 @@
                         <span>Dashboard</span>
 
                     </h2>
-                    @if($flash=session('message'))
+                    <?php if($flash=session('message')): ?>
                     <div class="alert alert-success" id="flash-message">
-                        {{$flash}}
+                        <?php echo e($flash); ?>
+
                     </div>
-                    @endif
+                    <?php endif; ?>
                 </div>
                 <div class="content-top">
 
 
-                    @yield('content')
+                    <?php echo $__env->yieldContent('content'); ?>
 
 
 
@@ -156,7 +158,7 @@
     <script src="/ad/plugins/select2/select2.full.min.js"></script>
     <script src="/ad/plugins/tinymce/tinymce.jquery.min.js"></script>
     <script type="text/javascript" src="/ad/plugins/tinymce/tinymce.min.js"></script>
-    <script src="{{url('http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js')}}"></script>
+    <script src="<?php echo e(url('http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js')); ?>"></script>
 
     <!-- Initialization of Plugins -->
     <script type="text/javascript" src="/ad/js/template.js"></script>

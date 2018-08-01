@@ -2,55 +2,30 @@
 <div class="col-md-12 main">
     <div class="content-top-1">
         <div>
-            <div class="col-md-2 col-xs-6 pull-right">
-
-                <b> {{$username}}</b>
-                <a class="nav-link text-success btn btn-outline-success" href="/logout-user" onclick="event.preventDefault();                                                 document.getElementById('logout').submit();">
-                    Logout
-                </a>
-
-                <form id="logout" action="/logout-user" method="POST" style="display: one;">
-                    {{ csrf_field() }}
-                </form>
+            <div class="col-md-10">
+                <h1>Saved Posts</h1>
             </div>
-            <div class="col-md-10 col-xs-6">
-                <h1>All Posts</h1>
-            </div>
+
         </div>
         <div class="space"></div>
-<hr>
+        <hr>
         <div class="panel-body">
 
 
 
+
+
             <div class="row">
-                @foreach($imagesArray as $image)
+                @foreach($images as $image)
                 <div class="col-md-3">
-
-                    <img class="img-thumbnail img-responsive" src="{{asset($image[0])}}" />
-
-
-
-
-                    <form method="POST" action="/add-post" enctype="multipart/form-data">
+                    <a href="/">
+                        <img class="img-thumbnail img-responsive" src="{{asset($image->url)}}" /> </a>
+                    <form method="POST" action="{{url('/admin/delete-post/'.$image->id)}}" class="delete">
                         {{ csrf_field() }}
-                        <input type="hidden" value="{{$image[0]}}" name="image" />
-                        <input type="hidden" value="{{$image[1]}}" name="link" />
-                        <b>Add to Menu</b>
-                        <select name="submenu" class="form-control">
-                            @foreach($cate as $item)
-                            <option value="{{$item->title}}">{{ $item->title }}</option>
-                            @endforeach
-                        </select>
-                        <div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
+                        <input name="_method" value="delete" type="hidden">
+                        <button class="btn btn-danger" type="submit">Delete</button>
                     </form>
-
                 </div>
-
-
-
 
                 @endforeach
                 <br>
