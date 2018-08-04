@@ -4,10 +4,10 @@
 			<!-- BEGIN: BRAND -->
 			<div class="c-navbar-wrapper clearfix">
 				<div class="c-brand c-pull-left">
-					<a href="index.html" class="c-logo">
-						<img src="<?php echo e(asset('/images/family fun.jpg')); ?>" alt="JANGO" class="c-desktop-logo">
-						<img src="<?php echo e(asset('/images/family fun.jpg')); ?>" alt="JANGO" class="c-desktop-logo-inverse">
-						<img src="<?php echo e(asset('/images/family fun.jpg')); ?>" alt="JANGO" class="c-mobile-logo">
+					<a href="/" class="c-logo">
+						<img src="<?php echo e(asset('/assets/base/img/layout/logos/family fun.jpg')); ?>" alt="JANGO" class="c-desktop-logo">
+						<img src="<?php echo e(asset('/assets/base/img/layout/logos/family fun.jpg')); ?>" alt="JANGO" class="c-desktop-logo-inverse">
+						<img src="<?php echo e(asset('/assets/base/img/layout/logos/family fun.jpg')); ?>" alt="JANGO" class="c-mobile-logo">
 					</a>
 					<button class="c-hor-nav-toggler" type="button" data-target=".c-mega-menu">
 					<span class="c-line"></span>

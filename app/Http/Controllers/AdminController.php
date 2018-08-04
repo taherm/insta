@@ -70,7 +70,7 @@ class AdminController extends Controller
 
     public function logout()
     {
-        session()->flush();
+        session()->forget('account');
         return redirect('/admin/account');
     }
 

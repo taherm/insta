@@ -113,7 +113,7 @@
                 </div>
 
                 <div class="copy">
-                    <p>&copy; 2016. All Rights Reserved</p>
+                    <p>&copy; 2018. <a href="http://ideasowners.net/"> Ideasowners</a></p>
                 </div>
             </div>
             <div class="clearfix"> </div>
