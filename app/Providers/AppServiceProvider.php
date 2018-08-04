@@ -53,18 +53,9 @@ class AppServiceProvider extends ServiceProvider
             $view->with('cate', $categories);
         });
 
-        view()->composer('*', function($view)
-        {
-            $imagesFromDB=\App\Image::all();
-            $view->with('imagesFromDB',$imagesFromDB);
-        });
+       
         
-        view()->composer('admin.create-portfolio', function($view)
-        {
-            $categories = \App\Category::all();
-            $view->with('cate', $categories);
-        });
-    
+       
     
         view()->composer('menu.delete', function($view)
         {
@@ -78,12 +69,7 @@ class AppServiceProvider extends ServiceProvider
             $view->with('cate', $categories);
         });
 
-        view()->composer('admin.edit-portfolio', function($view)
-        {
-            $categories = \App\Category::all();
-            $view->with('cate', $categories);
-        });
-
+       
 
         view()->composer('admin.delete-menu', function($view)
         {
@@ -91,22 +77,12 @@ class AppServiceProvider extends ServiceProvider
             $view->with('cate', $categories);
         });
 
-        view()->composer('admin.delete-slider', function($view)
-        {
-            $slide=\App\Slider::all();
-            $view->with('slide', $slide);
-        });
-        
+       
 
 
 
 
-
-        view()->composer('partials.header', function($view)
-        {
-            $categories = \App\Menu::all();
-            $view->with('cat', $categories);
-        });
+       
     
     
         view()->composer('admin.sub-menu', function($view)
@@ -141,12 +117,7 @@ class AppServiceProvider extends ServiceProvider
             $view->with('cate', $categories);
         });
 
-        view()->composer('admin.delete-slider', function($view)
-        {
-            $slide=\App\Slider::all();
-            $view->with('slide', $slide);
-        });
-
+       
 
 
 

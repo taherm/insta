@@ -1,246 +1,27 @@
 <!DOCTYPE html>
-<!-- 
-Theme: JANGO - Ultimate Multipurpose HTML Theme Built With Twitter Bootstrap 3.3.7
-Version: 2.0.1
-Author: Themehats
-Site: http://www.themehats.com
-Purchase: http://themeforest.net/item/jango-responsive-multipurpose-html5-template/11987314?ref=themehats
-Contact: support@themehats.com
-Follow: http://www.twitter.com/themehats
--->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en"  >
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
+<html lang="en">
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<!-- /Added by HTTrack -->
+<?php echo $__env->make('partials.head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-<!-- Mirrored from themehats.com/themes/jango/demos/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Mar 2018 15:46:29 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<head>
-	<meta charset="utf-8"/>
-	<title>Family Fun</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<meta content="" name="description"/>
-	<meta content="" name="author"/>
-		<!-- BEGIN GLOBAL MANDATORY STYLES -->
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&amp;subset=all' rel='stylesheet' type='text/css'>
-	<link href="<?php echo e(asset('/assets/plugins/socicon/socicon.css')); ?>" rel="stylesheet" type="text/css"/>
-	<link href="<?php echo e(asset('/assets/plugins/bootstrap-social/bootstrap-social.css')); ?>" rel="stylesheet" type="text/css"/>		
-	<link href="<?php echo e(asset('/assets/plugins/font-awesome/css/font-awesome.min.css')); ?>" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-	<link href="<?php echo e(asset('/assets/plugins/simple-line-icons/simple-line-icons.min.css')); ?>" rel="stylesheet" type="text/css"/>
-	<link href="<?php echo e(asset('/assets/plugins/animate/animate.min.css')); ?>" rel="stylesheet" type="text/css"/>
-	<link href="<?php echo e(asset('/assets/plugins/bootstrap/css/bootstrap.min.css')); ?>" rel="stylesheet" type="text/css"/>
-	<!-- END GLOBAL MANDATORY STYLES -->
+<body class="c-layout-header-fixed c-layout-header-mobile-fixed">
 
-			<!-- BEGIN: BASE PLUGINS  -->
-			<link href="<?php echo e(asset('/assets/plugins/revo-slider/css/settings.css')); ?>" rel="stylesheet" type="text/css"/>
-			<link href="<?php echo e(asset('/assets/plugins/revo-slider/css/layers.css')); ?>" rel="stylesheet" type="text/css"/>
-			<link href="<?php echo e(asset('/assets/plugins/revo-slider/css/navigation.css')); ?>" rel="stylesheet" type="text/css"/>
-			<link href="<?php echo e(asset('/assets/plugins/cubeportfolio/css/cubeportfolio.min.css')); ?>" rel="stylesheet" type="text/css"/>
-			<link href="<?php echo e(asset('/assets/plugins/owl-carousel/assets/owl.carousel.css')); ?>" rel="stylesheet" type="text/css"/>
-			<link href="<?php echo e(asset('/assets/plugins/fancybox/jquery.fancybox.css')); ?>" rel="stylesheet" type="text/css"/>
-			<link href="<?php echo e(asset('/assets/plugins/slider-for-bootstrap/css/slider.css')); ?>" rel="stylesheet" type="text/css"/>
-				<!-- END: BASE PLUGINS -->
-	
-			<!-- BEGIN: PAGE STYLES -->
-			<link href="<?php echo e(asset('/assets/plugins/ilightbox/css/ilightbox.css')); ?>" rel="stylesheet" type="text/css"/>
-			<link rel="stylesheet" href="<?php echo e(asset('/assets/plugins/colorbox.css')); ?>" />
-				<!-- END: PAGE STYLES -->
-	
-    <!-- BEGIN THEME STYLES -->
-	<link href="<?php echo e(asset('/assets/demos/default/css/plugins.css')); ?>" rel="stylesheet" type="text/css"/>
-	<link href="<?php echo e(asset('/assets/demos/default/css/components.css')); ?>" id="style_components" rel="stylesheet" type="text/css"/>
-	<link href="<?php echo e(asset('/assets/demos/default/css/themes/default.css')); ?>" rel="stylesheet" id="style_theme" type="text/css"/>
-	<link href="<?php echo e(asset('/assets/demos/default/css/custom.css')); ?>" rel="stylesheet" type="text/css"/>
-	<!-- END THEME STYLES -->
-
-	<link rel="shortcut icon" href="favicon.ico"/>
-</head><body class="c-layout-header-fixed c-layout-header-mobile-fixed"> 
-		
 	<!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
-<!-- BEGIN: HEADER -->
-<header class="c-layout-header c-layout-header-4 c-layout-header-default-mobile" data-minimize-offset="80">
-		<div class="c-navbar">
-		<div class="container">
-			<!-- BEGIN: BRAND -->
-			<div class="c-navbar-wrapper clearfix">
-				<div class="c-brand c-pull-left">
-					<a href="index.html" class="c-logo">
-						<img src="<?php echo e(asset('/images/family fun.jpg')); ?>" alt="JANGO" class="c-desktop-logo">
-						<img src="<?php echo e(asset('/images/family fun.jpg')); ?>" alt="JANGO" class="c-desktop-logo-inverse">
-						<img src="<?php echo e(asset('/images/family fun.jpg')); ?>" alt="JANGO" class="c-mobile-logo">
-					</a>
-					<button class="c-hor-nav-toggler" type="button" data-target=".c-mega-menu">
-					<span class="c-line"></span>
-					<span class="c-line"></span>
-					<span class="c-line"></span>
-					</button>
-					
-				</div>
-				<!-- END: BRAND -->				
-				<!-- BEGIN: QUICK SEARCH -->
-				<form class="c-quick-search" action="#">
-					<input type="text" name="query" placeholder="Type to search..." value="" class="form-control" autocomplete="off">
-					<span class="c-theme-link">&times;</span>
-				</form>
-				<!-- END: QUICK SEARCH -->	
-				<!-- BEGIN: HOR NAV -->
-				<!-- BEGIN: LAYOUT/HEADERS/MEGA-MENU -->
-<!-- BEGIN: MEGA MENU -->
-<!-- Dropdown menu toggle on mobile: c-toggler class can be applied to the link arrow or link itself depending on toggle mode -->
-<nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-uppercase c-fonts-bold">
-	<ul class="nav navbar-nav c-theme-nav"> 
-	<li class="c-active">
-						<a href="/" class="c-link dropdown-toggle">Home<span class="c-arrow c-toggler"></span></a>
-						</li>
-	<?php $__currentLoopData = $cat; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-	<?php if($item->children->count() > 0): ?>
-						
-						<li class="c-menu-type-classic">
-						<a href="/" class="c-link dropdown-toggle"><?php echo e($item->title); ?><span class="c-arrow c-toggler"></span></a>
-													<ul class="dropdown-menu c-menu-type-classic c-pull-left">
-													<?php $__currentLoopData = $item->children; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $submenu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-										            <li>
-                									<a href="<?php echo e(url('/menu/'.$submenu->title)); ?>"><?php echo e($submenu->title); ?></a>
-            										</li>
-													<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-													</ul>
-						</li>
-						<?php else: ?>
-						<li class="c-active">
-						<a href="/" class="c-link dropdown-toggle"><?php echo e($item->title); ?><span class="c-arrow c-toggler"></span></a>
-						</li>
-						<?php endif; ?>
-				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+	<!-- BEGIN: HEADER -->
+	<?php echo $__env->make('partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> <?php echo $__env->yieldContent('content'); ?>
 
-				<li class="c-active">
-						<a href="/about" class="c-link dropdown-toggle">About Us<span class="c-arrow c-toggler"></span></a>
-						</li>
-						<li class="c-active">
-						<a href="/contact" class="c-link dropdown-toggle">Contact Us<span class="c-arrow c-toggler"></span></a>
-						</li>
-	</ul>
-</nav>
-<!-- END: MEGA MENU --><!-- END: LAYOUT/HEADERS/MEGA-MENU -->
-				<!-- END: HOR NAV -->		
-			</div>			
-			<!-- BEGIN: LAYOUT/HEADERS/QUICK-CART -->
-<!-- BEGIN: CART MENU -->
-		</div>
-	</div>
-</header>
-
-<?php echo $__env->yieldContent('content'); ?>
-
-<a name="footer"></a>
-<footer class="c-layout-footer c-layout-footer-6 c-bg-grey-1">
-
-
-	<div class="c-postfooter c-bg-dark-2">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-12 c-col">
-					<p class="c-copyright c-font-grey">2015 &copy; JANGO
-						<span class="c-font-grey-3">All Rights Reserved.</span>
-					</p>
-				</div>
-							</div>
-		</div>
-	</div>
-
-</footer>
-<!-- END: LAYOUT/FOOTERS/FOOTER-6 -->
+	<a name="footer"></a>
+	<?php echo $__env->make('partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<!-- END: LAYOUT/FOOTERS/FOOTER-6 -->
 
 	<!-- BEGIN: LAYOUT/FOOTERS/GO2TOP -->
-<div class="c-layout-go2top">
-	<i class="icon-arrow-up"></i>
-</div>
+	<div class="c-layout-go2top">
+		<i class="icon-arrow-up"></i>
+	</div>
 
-	<script src="<?php echo e(asset('/assets/plugins/jquery.min.js')); ?>" type="text/javascript" ></script>
-	<script src="<?php echo e(asset('/assets/plugins/jquery-migrate.min.js')); ?>" type="text/javascript" ></script>
-	<script src="<?php echo e(asset('/assets/plugins/bootstrap/js/bootstrap.min.js')); ?>" type="text/javascript" ></script>
-	<script src="<?php echo e(asset('/assets/plugins/jquery.easing.min.js')); ?>" type="text/javascript" ></script>
-	<script src="<?php echo e(asset('/assets/plugins/reveal-animate/wow.js')); ?>" type="text/javascript" ></script>
-	<script src="<?php echo e(asset('/assets/demos/default/js/scripts/reveal-animate/reveal-animate.js')); ?>" type="text/javascript" ></script>
-
-	<!-- END: CORE PLUGINS -->
-
-			<!-- BEGIN: LAYOUT PLUGINS -->
-			<script src="<?php echo e(asset('/assets/plugins/revo-slider/js/jquery.themepunch.tools.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/revo-slider/js/jquery.themepunch.revolution.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/revo-slider/js/extensions/revolution.extension.video.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/owl-carousel/owl.carousel.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/counterup/jquery.waypoints.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/counterup/jquery.counterup.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/fancybox/jquery.fancybox.pack.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/smooth-scroll/jquery.smooth-scroll.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/typed/typed.min.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/slider-for-bootstrap/js/bootstrap-slider.js')); ?>" type="text/javascript"></script>
-			<script src="<?php echo e(asset('/assets/plugins/js-cookie/js.cookie.js')); ?>" type="text/javascript"></script>
-				<!-- END: LAYOUT PLUGINS -->
-	
-	<!-- BEGIN: THEME SCRIPTS -->
-	<script src="<?php echo e(asset('/assets/base/js/components.js')); ?>" type="text/javascript"></script>
-	<script src="<?php echo e(asset('/assets/base/js/components-shop.js')); ?>" type="text/javascript"></script>
-	<script src="<?php echo e(asset('/assets/base/js/app.js')); ?>" type="text/javascript"></script>
-	<script src="<?php echo e(asset('/assets/base/js/jquery.colorbox.js')); ?>"></script>
-	<!-- END: THEME SCRIPTS -->
-	<script src="<?php echo e(asset('assets/demos/default/js/scripts/pages/fullwidth-gallery.js')); ?>" type="text/javascript"></script>
-					
-			<!-- BEGIN: PAGE SCRIPTS -->
-								<script src="<?php echo e(asset('/assets/demos/default/js/scripts/revo-slider/slider-4.js')); ?>" type="text/javascript"></script>
-											<script src="<?php echo e(asset('/assets/plugins/isotope/isotope.pkgd.min.js')); ?>" type="text/javascript"></script>
-											<script src="<?php echo e(asset('/assets/plugins/isotope/imagesloaded.pkgd.min.js')); ?>" type="text/javascript"></script>
-											<script src="<?php echo e(asset('/assets/plugins/isotope/packery-mode.pkgd.min.js')); ?>" type="text/javascript"></script>
-											<script src="<?php echo e(asset('/assets/plugins/ilightbox/js/jquery.requestAnimationFrame.js')); ?>" type="text/javascript"></script>
-											<script src="<?php echo e(asset('/assets/plugins/ilightbox/js/jquery.mousewheel.js')); ?>" type="text/javascript"></script>
-											<script src="<?php echo e(asset('/assets/plugins/ilightbox/js/ilightbox.packed.js')); ?>" type="text/javascript"></script>
-											<script src="<?php echo e(asset('/assets/demos/default/js/scripts/pages/isotope-gallery.js')); ?>" type="text/javascript"></script>
-											<script src="<?php echo e(asset('/assets/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js')); ?>" type="text/javascript"></script>
-							<!-- END: PAGE SCRIPTS -->
-		<!-- END: LAYOUT/BASE/BOTTOM -->
+	<?php echo $__env->make('partials.scripts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</body>
 
 
-		<script>
-			$(document).ready(function(){
-				//Examples of how to assign the Colorbox event to elements
-				$(".group1").colorbox({rel:'group1'});
-				$(".group2").colorbox({rel:'group2', transition:"fade"});
-				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
-				$(".group4").colorbox({rel:'group4', slideshow:true});
-				$(".ajax").colorbox();
-				$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
-				$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
-				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
-				$(".inline").colorbox({inline:true, width:"50%"});
-				$(".callbacks").colorbox({
-					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
-					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
-					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
-					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
-					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
-				});
-
-				$('.non-retina').colorbox({rel:'group5', transition:'none'})
-				$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
-				
-				//Example of preserving a JavaScript event for inline calls.
-				$("#click").click(function(){ 
-					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
-					return false;
-				});
-			});
-		</script>
-    </body>
-	
-
-<!-- Mirrored from themehats.com/themes/jango/demos/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Mar 2018 15:58:27 GMT -->
 </html>
