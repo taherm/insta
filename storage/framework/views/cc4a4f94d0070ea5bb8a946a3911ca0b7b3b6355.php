@@ -5,9 +5,9 @@
 			<div class="c-navbar-wrapper clearfix">
 				<div class="c-brand c-pull-left">
 					<a href="/" class="c-logo">
-						<img src="<?php echo e(asset('/assets/base/img/layout/logos/familyfun-logo.jpg')); ?>" alt="JANGO" class="c-desktop-logo">
-						<img src="<?php echo e(asset('/assets/base/img/layout/logos/familyfun-logo.jpg')); ?>" alt="JANGO" class="c-desktop-logo-inverse">
-						<img src="<?php echo e(asset('/assets/base/img/layout/logos/familyfun-logo.jpg')); ?>" alt="JANGO" class="c-mobile-logo">
+						<img src="<?php echo e(asset('/assets/base/img/layout/logos/familyfun-logo.jpg')); ?>" alt="JANGO" class="c-desktop-logo img-responsive">
+						<img src="<?php echo e(asset('/assets/base/img/layout/logos/familyfun-logo.jpg')); ?>" alt="JANGO" class="c-desktop-logo-inverse img-responsive">
+						<img src="<?php echo e(asset('/assets/base/img/layout/logos/familyfun-logo.jpg')); ?>" alt="JANGO" class="c-mobile-logo img-responsive">
 					</a>
 					<button class="c-hor-nav-toggler" type="button" data-target=".c-mega-menu">
 					<span class="c-line"></span>

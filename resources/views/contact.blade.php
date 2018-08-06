@@ -36,35 +36,18 @@
             <ul class="list list-icons list-icons-style-3 mt-4">
                 <li>
                     <i class="fa fa-map-marker"></i>
-                    <strong>Address:</strong> Kuwait City - Sharq</li>
+                    <strong>Instagram:</strong> <a href="https://www.instagram.com/familyfunkw/"> Click Here</a>
                 <li>
                     <i class="fa fa-phone"></i>
-                    <strong>Phone:</strong>
-                    <a href="{{url('https://api.whatsapp.com/send?phone=96598824010')}}">(+965)98824010</a>
+                    <strong>Phone (Whatsapp):</strong>
+                   {{-- <a href="{{url('https://api.whatsapp.com/send?phone=96598824010')}}">(+965)98824010</a> --}}
                 </li>
-                <li>
-                    <i class="fa fa-phone"></i>
-                    <strong>Phone:</strong>(+965)94978803</li>
-
-                <li>
-                    <i class="fa fa-envelope"></i>
-                    <strong>Email:</strong>
-                    <a href="mailto:info@ideasowners.net">info@ideasowners.net</a>
-                </li>
+               
             </ul>
 
             <hr>
 
-            <h4 class="heading-primary">Business
-                <strong>Hours</strong>
-            </h4>
-            <ul class="list list-icons list-dark mt-4">
-                <li>
-                    <i class="fa fa-clock-o"></i> Saturday - Thursday - 9am to 9pm</li>
-
-                <li>
-                    <i class="fa fa-clock-o"></i> Friday - Closed</li>
-            </ul>
+            
 
                 </div>
                 </div>

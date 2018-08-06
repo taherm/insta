@@ -22,7 +22,6 @@
 
 
 
-
 	<div class="c-content-box c-size-md c-bg-white c-overflow-hide">
 
 
@@ -31,12 +30,8 @@
 			<div class="row">
 				<?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 				<div class="col-md-4">
-
 					<img class="img-thumbnail img-responsive" src="<?php echo e(asset($image->getimageThumbnailUrl())); ?>" alt="">
-					
 				</div>
-
-
 				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 			</div>
 
